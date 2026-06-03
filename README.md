@@ -61,7 +61,7 @@ Menu Utama → Pilih Stage → Pilih 3 Karakter → Battle → Hasil (Menang/Kal
 
 **1. Clone repository ini**
 ```bash
-git clone https://github.com/Ilufiaa/.git
+git clone https://github.com/Ilufiaa/ProjectPBO_Kelompok6.git
 cd ProjectPBO_Kelompok6
 ```
 
