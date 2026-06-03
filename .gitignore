@@ -1,0 +1,39 @@
+#  Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Backup files 
+*.orig
+
+# Save data 
+savegame.json
+
+# Virtual environments 
+venv/
+env/
+.venv/
+.env/
+
+#  IDE & editor 
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+#  Temp files 
+tempCodeRunnerFile.py
+*.tmp
+*.log
+
+#  Build / dist 
+dist/
+build/
+*.egg-info/
