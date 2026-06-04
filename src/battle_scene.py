@@ -3,6 +3,7 @@ import math
 import pygame
 from src.constants import *
 from src import game_context as ctx
+from src.base_scene import BaseScene
 from src.draw_utils import (
     draw_text, draw_rounded_rect,
     UIButton, get_font,
@@ -176,11 +177,11 @@ class CharacterSprite:
             and self.character.is_alive()
         )
 
-class BattleScene:
+class BattleScene(BaseScene):
     def __init__(self, player_team, enemy_team):
+        super().__init__()  
         self.player_team = player_team
         self.enemy_team  = enemy_team
-        self.done        = False
         self.result      = None
 
         self.floats = FloatingTextManager()

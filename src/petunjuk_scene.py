@@ -1,10 +1,11 @@
 import pygame
 from src.constants import *
 from src import game_context as ctx
+from src.base_scene import BaseScene
 
-class PetunjukScene:
+class PetunjukScene(BaseScene):
     def __init__(self):
-        self.done = False
+        super().__init__()  
 
         img_raw   = pygame.image.load("assets/backgrounds/elemenguide.png").convert_alpha()
         self.img  = pygame.transform.scale(img_raw, (WIDTH, HEIGHT))

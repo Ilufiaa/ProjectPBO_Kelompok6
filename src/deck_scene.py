@@ -4,6 +4,7 @@ from src.constants import *
 from src import game_context as ctx
 from src.roster import ALL_CHARS, ROLE_COLOR, ROLE_ICON
 from src.element import ELEMENT_COLOR
+from src.base_scene import BaseScene
 from src.draw_utils import (
     draw_text, draw_rounded_rect, UIButton,
     BG_DARK, BG_PANEL, BG_CARD, BG_CARD_HOVER, BG_CARD_SEL,
@@ -39,10 +40,10 @@ THUMB_MAX   = min(CARD_H - 12, 130)
 _MAX_HP_REF = max(cd["hp"] for cd in ALL_CHARS) if ALL_CHARS else 600
 
 
-class DeckScene:
+class DeckScene(BaseScene):
     def __init__(self):
+        super().__init__()  
         self.picked: list = []
-        self.done         = False
         self.go_back      = False
         self._page        = 0
         self._num_pages   = math.ceil(len(ALL_CHARS) / PER_PAGE)

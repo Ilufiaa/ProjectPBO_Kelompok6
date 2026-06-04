@@ -5,6 +5,7 @@ from src import game_context as ctx
 from src.save_data import load_save, MAX_LEVEL
 from src.roster import STAGE_ENEMIES, ROLE_COLOR, ROLE_ICON
 from src.element import ELEMENT_COLOR
+from src.base_scene import BaseScene
 from src.draw_utils import (
     draw_text, draw_rounded_rect, UIButton,
     BG_DARK, BG_PANEL, BG_CARD, BG_CARD_HOVER,
@@ -103,10 +104,10 @@ def _draw_node(surf, cx, cy, level, state, hover, font_m):
             pygame.draw.polygon(surf, C_STAR, _star_points(sx, sy, 7, 3))
 
 
-class StageScene:
+class StageScene(BaseScene):
     def __init__(self):
+        super().__init__()  
         self.chosen   = None
-        self.done     = False
         self.go_back  = False
         save          = load_save()
         self.unlocked = save["unlocked"]

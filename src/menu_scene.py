@@ -1,14 +1,16 @@
 import pygame
 from src.constants import *
 from src import game_context as ctx
+from src.base_scene import BaseScene
 from src.draw_utils import (
     draw_text, GameButton,
     ACCENT_BLUE, TEXT_WHITE,
 )
 
 
-class MenuScene:
+class MenuScene(BaseScene):
     def __init__(self):
+        super().__init__()
         self.choice = None
         bg_raw  = pygame.image.load("assets/backgrounds/menubaru.png").convert()
         self.bg = pygame.transform.scale(bg_raw, (WIDTH, HEIGHT))

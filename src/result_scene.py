@@ -1,6 +1,7 @@
 import pygame
 from src.constants import *
 from src import game_context as ctx
+from src.base_scene import BaseScene
 from src.draw_utils import (
     draw_text, draw_rounded_rect, UIButton,
     BG_DARK, BG_PANEL, TEXT_WHITE, TEXT_MUTED,
@@ -8,10 +9,10 @@ from src.draw_utils import (
 )
 
 
-class ResultScene:
+class ResultScene(BaseScene):
     def __init__(self, player_won: bool):
+        super().__init__()  
         self.player_won = player_won
-        self.done       = False
         self.choice     = None
         cx = WIDTH // 2
         cy = HEIGHT // 2
