@@ -61,10 +61,18 @@ Menu Utama → Pilih Stage → Pilih 3 Karakter → Battle → Hasil (Menang/Kal
 
 **1. Clone repository ini**
 ```bash
-git clone https://github.com/Ilufiaa/.git
+#dengan Terminal
+git clone https://github.com/Ilufiaa/ProjectPBO_Kelompok6.git
 cd ProjectPBO_Kelompok6
 ```
-
+```bash
+#dengan GitHub Desktop
+1.Buka GitHub Desktop
+2.Klik menu File → Clone Repository...
+3.Pilih tab URL, lalu masukkan:https://github.com/Ilufiaa/ProjectPBO_Kelompok6
+4.Pilih folder tujuan penyimpanan, klik Clone
+5.Setelah selesai, klik Show in Explorer untuk membuka foldernya
+```
 **2. Install dependensi**
 ```bash
 pip install pygame
