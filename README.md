@@ -176,14 +176,16 @@ run_scene(ResultScene(player_won=True))
 ### 5.  Inheritance (Pewarisan)
 BaseScene adalah kelas induk yang mendefinisikan antarmuka umum semua scene.
 Kelas turunan mewarisi atribut done dan boleh meng-override method handle() dan draw().
- src/base_scene.py — Kelas Induk
+```python
 class BaseScene:
     def __init__(self):
         self.done = False   # diwarisi semua scene anak
 
     def handle(self, event): pass   # di-override tiap scene
     def draw(self):          pass   # di-override tiap scene
+```
  Kelas Anak — mewarisi BaseScene
+ ```python
 class MenuScene(BaseScene):
     def __init__(self):
         super().__init__()   # mewarisi self.done dari parent
@@ -195,6 +197,7 @@ class BattleScene(BaseScene):
         super().__init__()   # mewarisi self.done dari parent
         self.player_team = player_team
         ...
+```
 ##  Screenshot Tampilan Program
 
 ###  Menu Utama
