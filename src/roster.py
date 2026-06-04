@@ -256,10 +256,10 @@ STAGE_ENEMIES = {
     ],
     5: [  
         {"name": "mengerikan final boss",      "element": Element.DARK, "role": ROLE_TANKER,
-         "hp": 10, "attack": 80, "defense": 99999,
-         "image": "assets/characters/doraemon.png",
+         "hp": 10, "attack": 80, "defense": 9999999999,
+         "image": "assets/characters/mengerikan.png",
          "basic": {"name": "Future Shock",  "power": 10},
-         "skill": {"name": "unidentified", "power": 45, "type": "attack", "cooldown": 3,
+         "skill": {"name": "unidentified", "power": 45, "type": "attack", "cooldown": 2,
                    "desc": "unidentified"}},
     ],
 }
